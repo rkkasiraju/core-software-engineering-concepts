@@ -12,6 +12,14 @@
 
 29. When different databases have conflicting approaches to schema migrations and versioning, how would you approach migration orchestration, compatibility checks, and rolling deployments?
 
+## Replication & Multi-Region Sync
+
+32. How do primary and secondary replicas synchronize data, and what mechanisms ensure consistent data is served to clients across both replicas? What happens during network partitions?
+
+33. In a multi-region cluster setup, how would you handle data synchronization across regions? What are the trade-offs between strong consistency, eventual consistency, and read-your-writes semantics?
+
+34. How would you design failover from primary to secondary replica in a multi-region deployment? What are the data loss implications and how do you handle split-brain scenarios?
+
 ## Transactions & Consistency
 
 2. A single use case requires updating two different databases atomically. How would you decide between using a distributed transaction (XA/2PC), a Saga pattern, or eventual consistency?
@@ -83,6 +91,14 @@
 ## Security & Access Control
 
 19. When security and access controls differ between databases (different credentials, roles, or network zones), what approaches ensure secure configuration, least privilege, and audit trails?
+
+35. How would you handle mTLS (mutual TLS) authentication between application instances and databases across different regions? What certificate management and rotation strategy would you use?
+
+36. Your system manages secrets (database passwords, encryption keys, API credentials) that services need to access databases in multiple regions. How would you design secret rotation, revocation, and access control?
+
+37. How does load balancing interact with database routing in a multi-region setup? How would you ensure requests are routed to the nearest healthy replica without sacrificing consistency?
+
+38. In a multi-region deployment, how would you configure firewall rules to allow secure communication between application instances and databases while preventing unauthorized access? What about cross-region replication traffic?
 
 ## RBAC & Runtime Configuration Cache Invalidation
 
