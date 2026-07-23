@@ -1,4 +1,4 @@
-Yes. For the **next 2–3 years (2026–2029)**, I would consider the following a **final, future-proof knowledge map** for **Staff/Principal Engineer** interviews at companies like Microsoft, Google, Amazon, Meta, Salesforce, ServiceNow, Atlassian, Uber, Airbnb, Walmart Global Tech, Wells Fargo, JPMorgan Chase, Goldman Sachs, and other large-scale product organizations.
+For the **next 2–3 years (2026–2029)**, I would consider the following a **final, future-proof knowledge map** for **Staff/Principal Engineer** interviews at companies like Microsoft, Google, Amazon, Meta, Salesforce, ServiceNow, Atlassian, Uber, Airbnb, Walmart Global Tech, Wells Fargo, JPMorgan Chase, Goldman Sachs, and other large-scale product organizations.
 
 This intentionally focuses on **concepts that will remain relevant**, rather than chasing every new framework or vendor.
 
