@@ -14,6 +14,196 @@
 
 63. Your team needs cross-database synchronization between relational, document, and event stores. Would you build a custom synchronization framework or adopt an existing platform? Walk through evaluation criteria, operational complexity, vendor lock-in, scalability, cost, and long-term maintenance.
 
+72. Your system has grown from a monolith to 200+ services, and development velocity has slowed significantly. How would you identify architectural bottlenecks (service boundary mismatches, excessive inter-service calls, shared state, deployment coordination overhead) and evolve the system?
+
+73. A business acquisition requires integrating two completely different platforms within six months. How would you approach architecture (data model reconciliation, API contract negotiation, team autonomy), migration strategy (phased vs big bang, rollback procedures), and risk reduction (feature flag isolation, separate deployments)?
+
+74. A critical third-party vendor announces end-of-life for a platform your organization depends on. How would you plan the replacement (build vs buy vs alternative vendor), manage dual-running systems, coordinate team capacity, and minimize disruption?
+
+75. Different teams have adopted different technologies for solving the same problem (microservice frameworks, database choices, cache backends). How would you standardize without disrupting delivery (consensus building, migration paths, cost/risk analysis)?
+
+76. The organization wants to migrate from on-premises to cloud while continuing feature development. How would you approach the migration (data replication, network connectivity, failover/failback, compliance, cost management)?
+
+## Scalability
+
+77. Your application suddenly experiences 20× normal traffic after a product launch. Walk through: (1) identifying bottlenecks (database, application, network, storage), (2) scaling synchronously vs queuing requests, (3) load testing to validate capacity increases, (4) graceful degradation strategies, and (5) cost vs latency trade-offs.
+
+78. One customer generates 80% of the platform traffic, affecting every other tenant (noisy neighbor problem). How would you redesign the system (per-customer connection pools, traffic shaping, workload isolation, tiered SLOs)?
+
+79. Traffic grows gradually over two years until latency becomes unacceptable. How would you determine whether to optimize existing code (low-hanging fruit), redesign components (replication, sharding), or architect fundamentally differently (microservices)?
+
+80. Your APIs handle millions of requests per minute, but only a few endpoints become bottlenecks. How would you investigate (distributed tracing, database query analysis, dependency profiling) and implement targeted fixes (caching, async processing, circuit breakers)?
+
+81. Storage requirements increase by 100 TB every year. How would you redesign storage architecture (tiering hot/warm/cold data, data retention policies, compression, archival strategies)?
+
+## Production Incidents
+
+82. Customers report missing data, but all dashboards show the system is healthy. How would you investigate (data consistency checks across databases, audit logs, eventual consistency windows, replay gaps in event streams)?
+
+83. Multiple services fail simultaneously after a routine deployment. How would you coordinate incident response (blast radius assessment, deployment rollback decision, service restoration priority, incident timeline reconstruction)?
+
+84. Production latency increases every day at exactly the same time. How would you investigate (scheduled batch jobs, cache expiration cycles, cron maintenance tasks, external service degradation at fixed times)?
+
+85. CPU utilization remains low while request latency increases significantly. What possibilities would you explore (connection pool exhaustion, lock contention, I/O bottlenecks, garbage collection pauses, downstream service slowdown)?
+
+86. Users intermittently receive stale data even though databases are healthy. How would you debug the issue (read-after-write consistency gaps, eventual consistency windows, cache invalidation bugs, clock skew across nodes)?
+
+## Distributed Systems
+
+87. Two services disagree about the current state of the same business entity. How would you determine which state is correct (event log replay, authoritative system identification, eventual consistency reconciliation, idempotency key verification)?
+
+88. A distributed workflow completes successfully for 99.9% of requests but occasionally leaves inconsistent data. How would you investigate (race conditions in saga coordination, timeout edge cases, idempotency failures, compensating transaction bugs)?
+
+89. Events begin arriving out of order after scaling consumers horizontally. How would you redesign processing (per-partition ordering enforcement, causality tracking with version vectors, replay mechanisms)?
+
+90. A message queue accumulates millions of unprocessed events overnight. How would you recover safely (detecting root cause of stall, restarting consumers without duplicate processing, prioritizing critical events, capacity planning)?
+
+91. Different services independently retry failed requests, creating exponential traffic amplification. How would you prevent cascading failures (exponential backoff with jitter, circuit breakers, bulkheads, request deduplication)?
+
+## Database
+
+92. Database CPU reaches 100% while application servers remain mostly idle. How would you identify the root cause (slow queries, missing indexes, table scans on large datasets, lock contention, connection pool misuse)?
+
+93. Read replicas begin returning stale data during peak traffic. How would you maintain correctness (read-your-writes consistency, read-from-primary fallback, consistency level negotiation, replication lag monitoring)?
+
+94. A schema migration must be performed without downtime on a database serving millions of users. How would you execute it (backward compatibility windows, shadow columns, zero-downtime deployment patterns)?
+
+95. One database shard grows much faster than the others. How would you rebalance the system (resharding strategy, data migration coordination, temporary hotspot handling)?
+
+96. A production index is accidentally dropped during business hours. How would you recover while minimizing customer impact (recreate index with minimal locking, query plan degradation management, customer communication)?
+
+## Concurrency
+
+97. Duplicate financial transactions occasionally occur under heavy load. How would you investigate (race condition detection, idempotency key missing, database uniqueness constraint timing, transaction isolation level analysis)?
+
+98. Two users simultaneously modify the same business object and both updates succeed incorrectly. How would you redesign consistency (optimistic locking with version numbers, pessimistic locking, CAS operations, conflict resolution)?
+
+99. Deadlocks begin increasing after introducing parallel processing. How would you identify the root cause (lock ordering violations, query plan changes, contention visualization, automated detection)?
+
+100. Thousands of concurrent operations compete for the same shared resource. How would you reduce contention (lock-free data structures, batching, striped locks, resource pooling)?
+
+101. Batch jobs overlap unexpectedly and process the same records twice. How would you prevent duplicate work (distributed locks, idempotent processing, job deduplication tracking)?
+
+## Performance
+
+102. Average latency is acceptable, but P99 latency continues increasing. How would you investigate (long-tail distribution sources, outlier queries, GC pauses, virtual thread starvation)?
+
+103. A new release doubles memory usage without increasing functionality. How would you analyze the regression (heap dump analysis, object allocation profiling, memory leak detection)?
+
+104. Throughput decreases as additional application instances are added. What possibilities would you investigate (shared bottleneck, contention, work stealing, uneven load distribution)?
+
+105. Garbage collection pauses become unpredictable after increasing heap size. How would you tune the application (GC algorithm selection, heap region sizing, object allocation patterns)?
+
+106. Network utilization appears normal, yet user experience is poor. How would you investigate (packet loss, latency spikes, DNS resolution delays, load balancer issues)?
+
+## Caching
+
+107. Cache hit ratio suddenly drops after deployment. How would you determine the cause (data eviction policy changes, TTL reduction, cache key format modification, traffic pattern shift)?
+
+108. Cache invalidation occasionally fails, causing inconsistent customer experiences. How would you redesign the solution (event-driven invalidation, time-based expiration with staggering, cache versioning)?
+
+109. Cache servers fail during peak traffic. How should the application behave (graceful degradation, cache bypass, circuit breaker activation, queue upstream requests)?
+
+110. A cache warm-up process overloads the database after every deployment. How would you improve it (async warm-up, staged loading, resource throttling)?
+
+111. Multiple services maintain independent caches for the same data. How would you ensure consistency (distributed cache, invalidation messaging, TTL coordination)?
+
+## Kubernetes & Platform
+
+112. Kubernetes repeatedly restarts healthy application pods. How would you investigate (readiness probe false positives, liveness probe sensitivity, resource limit thrashing, kernel OOM killer)?
+
+113. Autoscaling adds more pods, but throughput does not improve. What possibilities would you explore (resource bottleneck elsewhere, connection pool saturation, licensing limits, fixed-size shared resources)?
+
+114. A cluster upgrade unexpectedly impacts production traffic. How would you minimize risk (canary upgrades, drain verification, version compatibility testing)?
+
+115. Resource utilization appears low while pods frequently fail due to resource limits. How would you diagnose the issue (memory spikes, burstable workloads, uneven distribution)?
+
+116. Node failures occur during peak business hours. How should workloads recover (pod affinity policies, graceful drain coordination, failover speed)?
+
+## Networking
+
+117. Users in one geographic region experience significantly higher latency than others. How would you investigate (CDN coverage, regional cloud availability, DNS routing, network topology)?
+
+118. API calls intermittently fail between services while infrastructure dashboards appear healthy. What would you examine (network jitter, DNS flakiness, SSL handshake timeouts, load balancer connection limits)?
+
+119. DNS changes cause intermittent outages after deployment. How would you diagnose the issue (TTL propagation delays, DNS caching conflicts, connection reuse)?
+
+120. TLS certificate renewal unexpectedly breaks service communication. How would you prevent this (automation with verification, certificate rotation scheduling, monitoring)?
+
+121. Network partitions isolate one data center from the rest of the system. How should the application behave (split-brain prevention, quorum-based decisions, data consistency trade-offs)?
+
+## Security
+
+122. An application credential is accidentally exposed publicly. Walk through your response: (1) credential rotation within minutes, (2) detecting whether the credential was used, (3) active connection invalidation, (4) secret propagation to all instances, (5) audit trail analysis, (6) incident communication, (7) post-incident prevention measures.
+
+123. Unauthorized data access is detected several weeks after deployment. How would you investigate (audit log analysis, timeline reconstruction, scope of breach assessment, regulatory notification requirements)?
+
+124. A security vulnerability affects a widely used library across hundreds of services. How would you coordinate remediation (dependency mapping, prioritization, rolling patch deployment, verification)?
+
+125. A privileged employee account is compromised. How would you limit business impact (immediate credential revocation, session termination, audit log review, access pattern analysis)?
+
+126. Your organization adopts Zero Trust networking. What architectural changes become necessary (identity verification for every connection, certificate-based auth, encryption in transit, network segmentation)?
+
+## CI/CD & Deployment
+
+127. A deployment succeeds technically but introduces subtle business inconsistencies. How would you detect them early (contract testing, data consistency checks, canary validation, automated rollback triggers)?
+
+128. Rolling deployment leaves old and new versions communicating incorrectly. How would you avoid compatibility issues (API versioning, backward compatibility windows, coordinated schema changes)?
+
+129. A rollback restores application code but not database changes. How would you recover (schema rollback procedures, dual-write strategies, data reconciliation)?
+
+130. Different environments drift significantly over time. How would you restore consistency (infrastructure-as-code enforcement, automated drift detection, compliance scanning)?
+
+131. Feature flags accidentally expose unfinished functionality to customers. How would you improve release safety (flag lifecycle enforcement, automated cleanup, access control)?
+
+## Reliability Engineering
+
+132. A dependency slows down but never completely fails. How should your application respond (timeout boundaries, adaptive retry, circuit breaker thresholds, fallback logic)?
+
+133. Retry mechanisms intended to improve reliability instead overload downstream systems. How would you redesign them (exponential backoff, jitter, rate limiting, idempotency requirements)?
+
+134. Circuit breakers frequently oscillate between open and closed states. What tuning considerations would you make (half-open duration, recovery threshold, consecutive failure counting)?
+
+135. A regional outage requires failover, but replicated data is several minutes behind. How would you make business decisions (RPO/RTO trade-offs, data loss acceptance, consistency vs availability)?
+
+136. A disaster recovery exercise reveals recovery objectives cannot be met. How would you improve preparedness (capacity planning, backup frequency, failover automation)?
+
+## Observability
+
+137. Customers report issues that cannot be reproduced in lower environments. How would you improve observability (production telemetry, user session replay, canary deployments)?
+
+138. Every service logs independently, making incident reconstruction difficult. How would you redesign observability (centralized logging, trace correlation, unified query language)?
+
+139. Monitoring generates thousands of alerts during a single outage. How would you reduce alert fatigue (alert aggregation, severity clustering, intelligent deduplication)?
+
+140. Metrics show healthy infrastructure while business KPIs decline. What additional telemetry would you collect (application-level metrics, user journey tracking, revenue impact measurement)?
+
+141. A critical production issue leaves almost no logs because logging was rate-limited. How would you redesign diagnostics (adaptive sampling, priority-based retention, structured logging)?
+
+## Leadership & Decision Making
+
+142. Two engineering teams strongly disagree on architectural direction. How would you facilitate the decision (evidence gathering, prototype comparison, risk assessment, consensus building)?
+
+143. A critical project is falling behind because of dependencies across multiple teams. How would you regain momentum (dependency mapping, parallel workstream creation, unblocking strategies)?
+
+144. Leadership requests delivery in half the estimated time. How would you respond (scope negotiation, quality/speed trade-offs, risk quantification, alternative timelines)?
+
+145. A production incident occurs while senior engineers are unavailable. How would you lead the response (escalation decision, on-call coordination, confidence building, decision authority)?
+
+146. Multiple stakeholders prioritize conflicting business objectives. How would you drive alignment (data-driven prioritization, impact assessment, phased delivery)?
+
+## AI & Emerging Technologies
+
+147. An AI assistant begins producing incorrect business recommendations after a model update. How would you investigate (model performance regression, data drift detection, inference pipeline validation)?
+
+148. A Retrieval-Augmented Generation (RAG) system returns outdated information despite recent updates. How would you diagnose retrieval quality (embedding staleness, ranking algorithm issues, knowledge base inconsistency)?
+
+149. AI inference costs increase 5× in one month. How would you optimize architecture without reducing quality (batching, caching, quantization, model selection)?
+
+150. Autonomous agents begin repeatedly calling one another, creating an execution loop. How would you detect and prevent it (call graph analysis, recursion depth limits, conversation history analysis)?
+
+151. Regulations require explaining every AI-generated decision. How would you design for explainability, auditability, and compliance (feature attribution, decision logging, human override capabilities)?
+
 ## Transactions & Consistency
 
 2. A single use case requires updating two different databases atomically. How would you decide between using a distributed transaction (XA/2PC), a Saga pattern, or eventual consistency?
