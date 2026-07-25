@@ -1,4 +1,4 @@
-For the **next 2–3 years (2026–2029)**, I would consider the following a **final, future-proof knowledge map** for **Staff/Principal Engineer** interviews at companies like Microsoft, Google, Amazon, Meta, Salesforce, ServiceNow, Atlassian, Uber, Airbnb, Walmart Global Tech, Wells Fargo, JPMorgan Chase, Goldman Sachs, and other large-scale product organizations.
+For the **next 2–3 years (2026–2029)**, I would consider the following a **final, future-proof knowledge map** for **Staff/Principal Engineer** interviews at companies like Microsoft, Google, Amaz[...]
 
 This intentionally focuses on **concepts that will remain relevant**, rather than chasing every new framework or vendor.
 
@@ -81,6 +81,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Platform APIs
 * Backstage
 * GitOps
+* Kubernetes Operators & CRD design (operator patterns beyond Helm)
 
 ---
 
@@ -113,6 +114,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Amazon SQS/SNS
 * Azure Service Bus
 * EventBridge
+* Apache Pulsar
 
 ### Concepts
 
@@ -128,6 +130,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Exactly Once
 * At Least Once
 * At Most Once
+* CRDTs & conflict resolution techniques (for highly-available collaborative systems)
 
 ### Distributed Computing
 
@@ -225,12 +228,14 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Prometheus
 * Grafana
 * AlertManager
+* Time-series databases (InfluxDB, TimescaleDB) for metrics and telemetry
 
 ### Logging
 
 * ELK
 * OpenSearch
 * Loki
+* Structured logging & log correlation (correlation IDs / trace IDs)
 
 ### Tracing
 
@@ -248,6 +253,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * SLA
 * RED Metrics
 * USE Metrics
+* ML observability: prediction logging, model-level metrics, drift alerts
 
 ---
 
@@ -285,6 +291,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Image Signing
 * Sigstore
 * Cosign
+* Sigstore components: Rekor, Fulcio (attestation & transparency logs)
 
 ---
 
@@ -305,6 +312,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Harness
 * ArgoCD
 * GitOps
+* Flux
 
 ### Artifact Management
 
@@ -392,6 +400,7 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Prompt Management
 * Prompt Templates
 * Prompt Versioning
+* Model serving & inference infra (model servers, autoscaling inference, batching) — e.g., KFServing, BentoML, TorchServe
 
 ### Retrieval
 
@@ -428,6 +437,9 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Fine Tuning
 * Model Evaluation
 * Hallucination Detection
+* MLOps: feature stores, model/data/version lineage, drift detection
+* Model optimization & compression: quantization, pruning, distillation, ONNX
+* Privacy-preserving ML: differential privacy, federated learning, secure inference
 
 ---
 
@@ -445,6 +457,8 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Data Warehouse
 * Data Mesh
 * Data Contracts
+* Feature stores (online vs offline features)
+* Data catalog & lineage tooling (Amundsen, DataHub)
 
 ---
 
@@ -507,6 +521,9 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * JMeter
 * k6
 * Gatling
+* Project Loom / Virtual Threads & structured concurrency
+* GraalVM / Native Image & AOT compilation (trade-offs for cold-starts and binary size)
+* JVM tooling: Java Flight Recorder (JFR), Java Mission Control (JMC)
 
 ---
 
@@ -588,14 +605,15 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * MCP Ecosystem
 * Platform Engineering
 * Internal Developer Platforms
-* FinOps
+* FinOps / cost governance
 * Green Computing
 * Confidential Computing
 * Edge AI
-* WebAssembly (Wasm)
+* WebAssembly (Wasm) — runtimes & server/edge use-cases
 * eBPF
 * Software Supply Chain Security
 * AI Governance
+* Edge orchestration & device management (fleet management, OTA updates)
 
 ---
 
@@ -649,6 +667,16 @@ This intentionally focuses on **concepts that will remain relevant**, rather tha
 * Agentic AI
 * Data Platforms
 * Modern Security
+
+---
+
+## Practical tool & callouts (short list)
+
+* Resilience libraries: Resilience4j
+* API Gateways / proxies: Kong, Envoy, Apigee
+* Secrets / credential scanners: TruffleHog, GitLeaks
+* CI/CD examples: GitHub Actions reusable workflows, Tekton
+* Load testing alternatives: Locust, Artillery
 
 ---
 
