@@ -345,4 +345,3 @@ Java 25
 * JVM internals
 * Reflection
 * Modern Java (17/21/25) features
-* 
