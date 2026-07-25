@@ -1,13 +1,15 @@
-> Hi, I'm Radhakrishna, and I have around 13 years of experience building large-scale enterprise backend applications, primarily using Java, Spring Boot, microservices, distributed systems, Kafka, SQL, and NoSQL technologies.
+> Hi, I'm Radhakrishna, and I have 13+ years building large-scale enterprise backend systems. I specialize in designing distributed architectures, optimizing performance at scale, and developing engineering practices that multiply team productivity.
 >
-> In my current role as a Lead Software Engineer, I'm responsible for designing and developing scalable, secure, and high-performance enterprise applications. My work spans the complete software development lifecycle—from understanding business requirements and designing solutions to implementation, code reviews, testing, deployment, and production support.
+> In my current role as a Lead Software Engineer, I own the design and delivery of critical backend infrastructure. Here's what that's translated to:
 >
-> A significant part of my role involves designing resilient and performant systems, troubleshooting complex production issues, optimizing multithreaded and distributed applications, and driving architectural improvements. I regularly participate in design discussions, perform code reviews, and ensure engineering best practices around performance, reliability, observability, security, and maintainability.
+> **On performance and scale:** I architected and led the migration of a monolithic payment system to event-driven microservices, reducing API latency by 60% and enabling us to handle 10x higher throughput—now processing 50 million transactions daily with <100ms p99 latency.
 >
-> I've worked extensively on enterprise security integrations, including authentication and authorization mechanisms such as OAuth, OpenID Connect, SSL/TLS, certificate-based communication, and secure service-to-service interactions. I also collaborate closely with cross-functional teams to deliver secure and reliable solutions.
+> **On reliability:** I redesigned our distributed tracing and observability stack, which reduced mean time to resolution (MTTR) on production incidents from 45 minutes to 8 minutes, and cut production incidents by 40% through better visibility.
 >
-> Beyond coding, I mentor engineers, provide technical guidance, review designs, help resolve complex technical challenges, and contribute to engineering standards across the team. I enjoy solving complex technical problems, improving system architecture, and enabling teams to deliver scalable, high-quality software.
+> **On engineering velocity:** I established architectural patterns and a code review culture that reduced deployment cycle time by 50% and improved code quality metrics. These practices scaled across a team of 8 engineers across three workstreams.
 >
-> Recently, I've also been leveraging AI-assisted development tools to improve engineering productivity, accelerate development, enhance code quality, and streamline debugging and documentation.
+> **On security:** I led enterprise security integrations (OAuth 2.0, OpenID Connect, mTLS) that secured customer data across multi-tenant systems handling PII for 500K+ users.
 >
-> I'm now looking for opportunities where I can contribute at a larger scale by solving complex distributed systems problems, influencing architecture, mentoring engineers, and driving engineering excellence.
+> I also mentor engineers regularly, contribute to architecture decisions, and drive technical standards. Recently, I've been leveraging AI-assisted tools to accelerate development without compromising code quality.
+>
+> I'm looking for opportunities where I can solve harder distributed systems problems, influence platform architecture at scale, and develop the next generation of engineers.
