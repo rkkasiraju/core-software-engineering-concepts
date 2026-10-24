@@ -1,0 +1,503 @@
+# Core Concepts Checklist
+
+## Infrastructure & Cloud
+- [ ] AWS
+- [ ] Azure
+- [ ] GCP
+- [ ] Hybrid Cloud
+- [ ] Multi-Cloud
+- [ ] VMware/OpenStack
+- [ ] Virtual Machines
+- [ ] Containers
+- [ ] Serverless
+- [ ] Autoscaling
+- [ ] GPU Computing
+- [ ] Bare Metal
+- [ ] TCP/IP
+- [ ] HTTP/HTTPS
+- [ ] HTTP/2
+- [ ] HTTP/3
+- [ ] QUIC
+- [ ] DNS
+- [ ] CDN
+- [ ] VPC/VNet
+- [ ] CIDR
+- [ ] Subnets
+- [ ] Route Tables
+- [ ] Internet Gateway
+- [ ] NAT Gateway
+- [ ] Load Balancer (L4/L7)
+- [ ] VPN
+- [ ] Private Link
+- [ ] Direct Connect / ExpressRoute
+- [ ] Network Policies
+
+## Platform Engineering
+- [ ] Docker
+- [ ] Kubernetes
+- [ ] OpenShift
+- [ ] Helm
+- [ ] Operators
+- [ ] CRDs
+- [ ] StatefulSets
+- [ ] DaemonSets
+- [ ] Jobs/CronJobs
+- [ ] HPA
+- [ ] VPA
+- [ ] Cluster Autoscaler
+- [ ] Ingress Controller
+- [ ] Service Mesh
+- [ ] Istio
+- [ ] Linkerd
+- [ ] Envoy
+- [ ] Gateway API
+- [ ] Internal Developer Platform (IDP)
+- [ ] Golden Paths
+- [ ] Self-Service Infrastructure
+- [ ] Platform APIs
+- [ ] Backstage
+- [ ] GitOps
+- [ ] Kubernetes Operators & CRD design
+
+## API & Integration
+- [ ] REST
+- [ ] gRPC
+- [ ] GraphQL
+- [ ] WebSockets
+- [ ] Async APIs
+- [ ] API Gateway
+- [ ] API Management
+- [ ] OAuth2
+- [ ] OpenID Connect
+- [ ] JWT
+- [ ] API Versioning
+- [ ] OpenAPI
+- [ ] Rate Limiting
+- [ ] Throttling
+- [ ] Contract Testing
+
+## Distributed Systems
+- [ ] Kafka
+- [ ] RabbitMQ
+- [ ] Amazon SQS/SNS
+- [ ] Azure Service Bus
+- [ ] EventBridge
+- [ ] Apache Pulsar
+- [ ] Event Streaming
+- [ ] Event Sourcing
+- [ ] CQRS
+- [ ] Saga Pattern
+- [ ] Outbox Pattern
+- [ ] Dead Letter Queue
+- [ ] Retry Policies
+- [ ] Idempotency
+- [ ] Ordering
+- [ ] Exactly Once
+- [ ] At Least Once
+- [ ] At Most Once
+- [ ] CRDTs & conflict resolution techniques
+- [ ] CAP Theorem
+- [ ] PACELC
+- [ ] Consensus
+- [ ] Raft
+- [ ] Paxos
+- [ ] Leader Election
+- [ ] Distributed Locks
+- [ ] Distributed Transactions
+- [ ] Consistency Models
+- [ ] Clock Synchronization
+
+## Data Platform
+- [ ] PostgreSQL
+- [ ] MySQL
+- [ ] Oracle
+- [ ] SQL Server
+- [ ] MongoDB
+- [ ] Cassandra
+- [ ] DynamoDB
+- [ ] CosmosDB
+- [ ] Elasticsearch
+- [ ] OpenSearch
+- [ ] Replication
+- [ ] Sharding
+- [ ] Partitioning
+- [ ] Indexing
+- [ ] Query Optimization
+- [ ] Transactions
+- [ ] ACID
+- [ ] BASE
+- [ ] Read Replica
+- [ ] Eventual Consistency
+- [ ] Backup & Restore
+- [ ] Disaster Recovery
+
+## Storage
+- [ ] Object Storage
+- [ ] Block Storage
+- [ ] File Storage
+- [ ] Persistent Volumes
+- [ ] Persistent Volume Claims
+- [ ] Storage Classes
+- [ ] NFS
+- [ ] EFS
+- [ ] Azure Files
+- [ ] Lifecycle Policies
+- [ ] Backup Strategy
+- [ ] Archival
+
+## Caching
+- [ ] Redis
+- [ ] Hazelcast
+- [ ] Memcached
+- [ ] Cache Aside
+- [ ] Read Through
+- [ ] Write Through
+- [ ] Write Behind
+- [ ] TTL
+- [ ] Distributed Cache
+- [ ] Near Cache
+- [ ] Cache Invalidation
+
+## Observability
+- [ ] Prometheus
+- [ ] Grafana
+- [ ] AlertManager
+- [ ] Time-series databases
+- [ ] ELK
+- [ ] OpenSearch
+- [ ] Loki
+- [ ] Structured Logging
+- [ ] Log Correlation
+- [ ] Jaeger
+- [ ] Zipkin
+- [ ] OpenTelemetry
+- [ ] Metrics
+- [ ] Logs
+- [ ] Traces
+- [ ] SLI
+- [ ] SLO
+- [ ] SLA
+- [ ] RED Metrics
+- [ ] USE Metrics
+- [ ] ML Observability
+- [ ] Model-level metrics
+- [ ] Drift alerts
+
+## Security
+- [ ] IAM
+- [ ] RBAC
+- [ ] ABAC
+- [ ] OAuth2
+- [ ] OIDC
+- [ ] JWT
+- [ ] Vault
+- [ ] Secrets Manager
+- [ ] Certificate Manager
+- [ ] PKI
+- [ ] KMS
+- [ ] mTLS
+- [ ] TLS
+- [ ] WAF
+- [ ] API Security
+- [ ] Zero Trust
+- [ ] SBOM
+- [ ] Image Signing
+- [ ] Sigstore
+- [ ] Cosign
+- [ ] Rekor
+- [ ] Fulcio
+
+## CI/CD & DevSecOps
+- [ ] Git
+- [ ] GitHub
+- [ ] GitHub Actions
+- [ ] Jenkins
+- [ ] Harness
+- [ ] ArgoCD
+- [ ] Flux
+- [ ] Nexus
+- [ ] Artifact Registry
+- [ ] SonarQube
+- [ ] Trivy
+- [ ] SAST
+- [ ] DAST
+- [ ] Dependency Scanning
+- [ ] Container Scanning
+- [ ] Rolling Deployment
+- [ ] Canary Deployment
+- [ ] Blue-Green Deployment
+- [ ] Progressive Delivery
+- [ ] Feature Flags
+
+## Reliability Engineering (SRE)
+- [ ] High Availability
+- [ ] Fault Tolerance
+- [ ] Disaster Recovery
+- [ ] Multi-Region
+- [ ] Active-Active
+- [ ] Active-Passive
+- [ ] Retry
+- [ ] Circuit Breaker
+- [ ] Timeout
+- [ ] Bulkhead
+- [ ] Rate Limiting
+- [ ] Backpressure
+- [ ] Load Shedding
+- [ ] Graceful Degradation
+- [ ] Chaos Engineering
+- [ ] Error Budgets
+- [ ] Incident Response
+- [ ] Postmortems
+
+## Architecture Patterns
+- [ ] Monolith
+- [ ] Modular Monolith
+- [ ] Microservices
+- [ ] Event-Driven Architecture
+- [ ] SOA
+- [ ] Serverless
+- [ ] Domain Driven Design
+- [ ] Clean Architecture
+- [ ] Hexagonal Architecture
+- [ ] Onion Architecture
+- [ ] CQRS
+- [ ] Saga
+- [ ] API Gateway
+- [ ] BFF
+- [ ] Sidecar
+- [ ] Strangler
+- [ ] Adapter
+- [ ] Anti-Corruption Layer
+
+## AI Platform & AI Engineering
+- [ ] LLM Gateway
+- [ ] Prompt Management
+- [ ] Prompt Templates
+- [ ] Prompt Versioning
+- [ ] Model Serving & Inference Infrastructure
+- [ ] RAG
+- [ ] Embeddings
+- [ ] Chunking
+- [ ] Reranking
+- [ ] Hybrid Search
+- [ ] Semantic Search
+- [ ] pgvector
+- [ ] Pinecone
+- [ ] Milvus
+- [ ] Weaviate
+- [ ] AI Agents
+- [ ] Multi-Agent Systems
+- [ ] MCP
+- [ ] Tool Calling
+- [ ] Function Calling
+- [ ] Agent Memory
+- [ ] Agent Orchestration
+- [ ] Guardrails
+- [ ] AI Security
+- [ ] AI Observability
+- [ ] Model Registry
+- [ ] Fine Tuning
+- [ ] Model Evaluation
+- [ ] Hallucination Detection
+- [ ] MLOps
+- [ ] Feature Stores
+- [ ] Model Versioning
+- [ ] Data Lineage
+- [ ] Drift Detection
+- [ ] Quantization
+- [ ] Pruning
+- [ ] Distillation
+- [ ] ONNX
+- [ ] Differential Privacy
+- [ ] Federated Learning
+- [ ] Secure Inference
+
+## Data Engineering
+- [ ] ETL
+- [ ] ELT
+- [ ] CDC
+- [ ] Data Ingestion
+- [ ] Batch Processing
+- [ ] Stream Processing
+- [ ] Apache Spark
+- [ ] Apache Flink
+- [ ] Data Lake
+- [ ] Data Warehouse
+- [ ] Data Mesh
+- [ ] Data Contracts
+- [ ] Feature Stores
+- [ ] Data Catalog
+- [ ] Data Lineage
+
+## Infrastructure as Code
+- [ ] Terraform
+- [ ] OpenTofu
+- [ ] CloudFormation
+- [ ] Bicep
+- [ ] Pulumi
+- [ ] Ansible
+
+## Software Engineering Excellence
+- [ ] SOLID
+- [ ] Design Patterns
+- [ ] Refactoring
+- [ ] Clean Code
+- [ ] TDD
+- [ ] BDD
+- [ ] Contract Testing
+- [ ] Integration Testing
+- [ ] End-to-End Testing
+- [ ] Code Reviews
+- [ ] Pair Programming
+- [ ] Static Analysis
+- [ ] Secure Coding
+- [ ] Performance Optimization
+- [ ] Technical Debt Management
+
+## Performance Engineering
+- [ ] JVM Tuning
+- [ ] GC Tuning
+- [ ] Memory Profiling
+- [ ] CPU Profiling
+- [ ] Connection Pooling
+- [ ] Thread Pools
+- [ ] Async Processing
+- [ ] Reactive Programming
+- [ ] Throughput
+- [ ] Latency
+- [ ] Tail Latency
+- [ ] Capacity Planning
+- [ ] Load Testing
+- [ ] Stress Testing
+- [ ] Soak Testing
+- [ ] JMeter
+- [ ] k6
+- [ ] Gatling
+- [ ] Project Loom / Virtual Threads
+- [ ] Structured Concurrency
+- [ ] GraalVM / Native Image
+- [ ] AOT Compilation
+- [ ] Java Flight Recorder (JFR)
+- [ ] Java Mission Control (JMC)
+
+## Governance, Risk & Compliance
+- [ ] Audit Logging
+- [ ] Compliance
+- [ ] GDPR
+- [ ] PCI DSS
+- [ ] SOC 2
+- [ ] ISO 27001
+- [ ] Encryption at Rest
+- [ ] Encryption in Transit
+- [ ] Key Rotation
+- [ ] Data Retention
+- [ ] Data Classification
+- [ ] Data Lineage
+- [ ] Policy as Code
+
+## System Design & Architecture
+- [ ] Scalability
+- [ ] Reliability
+- [ ] Availability
+- [ ] Consistency
+- [ ] Latency
+- [ ] Throughput
+- [ ] Cost Optimization
+- [ ] Capacity Planning
+- [ ] Multi-Tenancy
+- [ ] Global Architecture
+- [ ] Edge Computing
+- [ ] Disaster Recovery
+- [ ] Architecture Decision Records (ADR)
+- [ ] Trade-off Analysis
+- [ ] Build vs Buy
+- [ ] Technology Evaluation
+
+## Engineering Leadership
+- [ ] Architecture Reviews
+- [ ] Technical Vision
+- [ ] Roadmap Planning
+- [ ] Cross-Team Design
+- [ ] RFC Process
+- [ ] Technical Strategy
+- [ ] Technology Standardization
+- [ ] Estimation
+- [ ] Risk Management
+- [ ] Dependency Management
+- [ ] Release Planning
+- [ ] Incident Management
+- [ ] Mentoring
+- [ ] Coaching
+- [ ] Technical Interviews
+- [ ] Delegation
+- [ ] Stakeholder Management
+- [ ] Conflict Resolution
+- [ ] Executive Communication
+
+## Emerging Technologies
+- [ ] AI-Native Applications
+- [ ] Agentic Systems
+- [ ] MCP Ecosystem
+- [ ] Platform Engineering
+- [ ] Internal Developer Platforms
+- [ ] FinOps / Cost Governance
+- [ ] Green Computing
+- [ ] Confidential Computing
+- [ ] Edge AI
+- [ ] WebAssembly (Wasm)
+- [ ] eBPF
+- [ ] Software Supply Chain Security
+- [ ] AI Governance
+- [ ] Edge Orchestration
+- [ ] Device Management
+
+## Practical Tool & Callouts
+- [ ] Resilience4j
+- [ ] Kong
+- [ ] Envoy
+- [ ] Apigee
+- [ ] TruffleHog
+- [ ] GitLeaks
+- [ ] GitHub Actions reusable workflows
+- [ ] Tekton
+- [ ] Locust
+- [ ] Artillery
+
+## Key Competency Areas
+- [ ] Distributed Systems
+- [ ] Cloud Architecture
+- [ ] System Design
+- [ ] Platform Engineering
+- [ ] AI Engineering
+- [ ] Reliability Engineering
+- [ ] Observability
+- [ ] Performance Engineering
+- [ ] Security
+- [ ] DevSecOps
+- [ ] Software Design
+- [ ] Testing Strategy
+- [ ] CI/CD
+- [ ] Code Quality
+- [ ] Technical Debt
+- [ ] Architecture Decisions
+- [ ] Technology Evaluation
+- [ ] Cost Optimization
+- [ ] Scalability Planning
+- [ ] Risk Management
+- [ ] Technical Vision
+- [ ] Cross-Team Influence
+- [ ] Mentoring
+- [ ] Stakeholder Management
+- [ ] Communication
+- [ ] Execution
+- [ ] AI-Native Architecture
+- [ ] Agentic AI
+- [ ] Data Platforms
+- [ ] Modern Security
+
+## Future-Ready Skills
+- [ ] AI-Native Architecture
+- [ ] Platform Engineering
+- [ ] Agentic AI
+- [ ] Data Platforms
+- [ ] Modern Security
